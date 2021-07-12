@@ -59,7 +59,7 @@ def listenAndRecognize():
         print("Google Speech Recognition could not understand audio")
     except sr.RequestError as e:
         print("Could not request results from Google Speech Recognition service; {0}".format(e))
-    print('returning: "' + statement + '"')
+    #print('returning: "' + statement + '"')
     return statement
 
 #==================================================================================================================================================================
@@ -97,7 +97,7 @@ def processText(inputString, engine):
             if actionTag == 'null':
                 #request action clarification
                 speak("I'm sorry, I don't know what action you want me to perform. Please enter one of the options", engine)
-                print("Action options:\n")
+                print("Action options:")
                 for l in actionTagList:
                     print(l)
                 actionLink = input('Type one of the above options: ')

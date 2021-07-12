@@ -50,7 +50,7 @@ def jarvis(data):
 
 # initialization
 time.sleep(2)
-speak("Hi Frank, what can I do for you?")
+speak("Hi, what can I do for you?")
 while 1:
     data = recordAudio()
     jarvis(data)
