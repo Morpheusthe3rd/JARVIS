@@ -97,7 +97,7 @@ def processText(inputString, engine):
             if actionTag == 'null':
                 #request action clarification
                 speak("I'm sorry, I don't know what action you want me to perform. Please enter one of the options", engine)
-                print("Action options:")
+                print("Action options:\n")
                 for l in actionTagList:
                     print(l)
                 actionLink = input('Type one of the above options: ')
@@ -107,6 +107,7 @@ def processText(inputString, engine):
                 print(actionReferenceList)
 
     #print(actionTag)
+
 
     #create action instance
     #for now I will structure this as if statements, which I will manually update with new actions.

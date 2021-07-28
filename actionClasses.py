@@ -9,7 +9,7 @@ import soundex
 class actionParent():             #This parent class will include base functions common to all actions
 
     def __init__(self, commandStatement):
-        self.commandStatement = commandStatement
+        self.commandStatement = commandStatement[1:]
 
     def actionOperations(self):
         #TODO
@@ -26,12 +26,12 @@ class actionParent():             #This parent class will include base functions
 
 class fileSearchAction(actionParent):
 
-    masterPath = "C:\\Users\\dcrid"
+    masterPath = "C:\\Users\\david"
 
     def __init__(self, commandStatement):
         actionParent.__init__(self, commandStatement)
         self.targetFile = ''
-        self.discoveredPaths = [0][0]
+        self.discoveredPaths = [[],[]]
         self.recursionTracker = 0
 
     def actionOperations(self, workingPath):
